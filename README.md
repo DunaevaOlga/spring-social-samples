@@ -1,3 +1,5 @@
+This fork demonstrates spring-social-vkontakte integration.
+
 Spring Social Samples
 =====================
 This repository contains sample projects illustrating usage of the Spring Social project.
