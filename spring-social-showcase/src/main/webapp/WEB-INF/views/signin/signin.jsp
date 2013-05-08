@@ -49,4 +49,8 @@
 	<form name="li_signin" id="li_signin" action="<c:url value="/signin/linkedin"/>" method="POST">
 		<button type="submit">Sign In with LinkedIn</button>
 	</form>
-	
+
+    <!-- VKONTAKTE SIGNIN -->
+    <form name="vk_signin" id="vk_signin" action="<c:url value="/signin/vkontakte"/>" method="POST">
+        <button type="submit">Sign In with VKontakte</button>
+    </form>

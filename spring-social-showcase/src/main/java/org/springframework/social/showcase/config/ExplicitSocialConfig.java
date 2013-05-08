@@ -48,6 +48,8 @@ import org.springframework.social.showcase.twitter.TweetAfterConnectInterceptor;
 import org.springframework.social.twitter.api.Twitter;
 import org.springframework.social.twitter.api.impl.TwitterTemplate;
 import org.springframework.social.twitter.connect.TwitterConnectionFactory;
+import org.springframework.social.vkontakte.api.VKontakte;
+import org.springframework.social.vkontakte.connect.VKontakteConnectionFactory;
 
 /**
  * Spring Social Configuration.
@@ -78,6 +80,8 @@ public class ExplicitSocialConfig {
 				environment.getProperty("facebook.clientSecret"), environment.getProperty("facebook.appNamespace")));
 		registry.addConnectionFactory(new LinkedInConnectionFactory(environment.getProperty("linkedin.consumerKey"),
 				environment.getProperty("linkedin.consumerSecret")));
+        registry.addConnectionFactory(new VKontakteConnectionFactory(environment.getProperty("vkontakte.consumerKey"),
+                environment.getProperty("vkontakte.consumerSecret")));
 		return registry;
 	}
 
@@ -117,6 +121,13 @@ public class ExplicitSocialConfig {
 		Connection<LinkedIn> linkedin = connectionRepository().findPrimaryConnection(LinkedIn.class);
 		return linkedin != null ? linkedin.getApi() : null;
 	}
+
+    @Bean
+    @Scope(value="request", proxyMode=ScopedProxyMode.INTERFACES)
+    public VKontakte vkontakte() {
+        Connection<VKontakte> vkontakte = connectionRepository().findPrimaryConnection(VKontakte.class);
+        return vkontakte  != null ? vkontakte .getApi() : null;
+    }
 
 	@Bean
 	public ConnectController connectController() {

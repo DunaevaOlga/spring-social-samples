@@ -39,6 +39,7 @@ import org.springframework.social.showcase.facebook.PostToWallAfterConnectInterc
 import org.springframework.social.showcase.signin.SimpleSignInAdapter;
 import org.springframework.social.showcase.twitter.TweetAfterConnectInterceptor;
 import org.springframework.social.twitter.config.annotation.EnableTwitter;
+import org.springframework.social.vkontakte.config.annotation.EnableVKontakte;
 
 /**
  * Spring Social Configuration.
@@ -55,6 +56,7 @@ import org.springframework.social.twitter.config.annotation.EnableTwitter;
 @EnableTwitter(appId="${twitter.consumerKey}", appSecret="${twitter.consumerSecret}")
 @EnableFacebook(appId="${facebook.clientId}", appSecret="${facebook.clientSecret}")
 @EnableLinkedIn(appId="${linkedin.consumerKey}", appSecret="${linkedin.consumerSecret}")
+@EnableVKontakte(appId="${vkontakte.consumerKey}", appSecret="${vkontakte.consumerSecret}")
 public class SocialConfig {
 
 	@Inject
