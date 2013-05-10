@@ -7,7 +7,7 @@
 <h3>Connect to VKontakte</h3>
 
 <form action="<c:url value="/connect/vkontakte" />" method="POST">
-	<input type="hidden" name="scope" value="notify,friends,photos,audio,video,notes,pages,wall,messages,offline" />
+	<input type="hidden" name="scope" value="notify,friends,photos,audio,video,notes,pages,wall,offline" />
 	<div class="formInfo">
 		<p>You aren't connected to VKontakte yet. Click the button to connect Spring Social Showcase with your VKontakte account.</p>
 	</div>
