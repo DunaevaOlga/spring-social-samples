@@ -1,4 +1,5 @@
 This fork demonstrates spring-social-vkontakte integration.
+I did changes to **spring-social-showcase** and **spring-social-showcase-xml** subprojects.
 
 Spring Social Samples
 =====================
