@@ -5,12 +5,14 @@
 	xmlns:twitter="http://www.springframework.org/schema/social/twitter"
 	xmlns:social="http://www.springframework.org/schema/social"
 	xmlns:linkedin="http://www.springframework.org/schema/social/linkedin"
+    xmlns:vkontakte="http://www.springframework.org/schema/social/vkontakte"
 	xmlns:c="http://www.springframework.org/schema/c"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/social/facebook http://www.springframework.org/schema/social/spring-social-facebook.xsd
 		http://www.springframework.org/schema/social/linkedin http://www.springframework.org/schema/social/spring-social-linkedin.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/social/twitter http://www.springframework.org/schema/social/spring-social-twitter.xsd
+		http://www.springframework.org/schema/social/vkontakte http://www.springframework.org/schema/social/spring-social-vkontakte.xsd
 		http://www.springframework.org/schema/social http://www.springframework.org/schema/social/spring-social.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
@@ -20,6 +22,7 @@
 	<facebook:config app-id="${facebook.clientId}" app-secret="${facebook.clientSecret}" app-namespace="socialshowcase" />
 	<twitter:config app-id="${twitter.consumerKey}" app-secret="${twitter.consumerSecret}"/>
 	<linkedin:config app-id="${linkedin.consumerKey}" app-secret="${linkedin.consumerSecret}"/>
+    <vkontakte:config app-id="${vkontakte.consumerKey}" app-secret="${vkontakte.consumerSecret}"/>
 
 	<social:jdbc-connection-repository/>	
 	<bean id="userIdSource" class="org.springframework.social.security.AuthenticationNameUserIdSource" />

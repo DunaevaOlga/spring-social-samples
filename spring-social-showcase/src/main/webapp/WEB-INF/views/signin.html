@@ -67,6 +67,12 @@
 				<input type="hidden" name="_csrf" th:value="${_csrf.token}"></input>
 				<button type="submit">Sign In with LinkedIn</button>
 			</form>
+
+            <!-- VKONTAKTE SIGNIN -->
+            <form name="vk_signin" id="vk_signin" th:action="@{/signin/vkontakte}" method="POST">
+                <input type="hidden" name="_csrf" th:value="${_csrf.token}"></input>
+                <button type="submit">Sign In with Vkontakte</button>
+            </form>
 		</div>		
 	</body>
 </html>
