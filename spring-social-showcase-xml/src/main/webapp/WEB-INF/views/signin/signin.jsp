@@ -56,6 +56,7 @@
 
     <!-- VKONTAKTE SIGNIN -->
     <form name="vk_signin" id="vk_signin" action="<c:url value="/signin/vkontakte"/>" method="POST">
+        <input type="hidden" name="scope" value="notify,friends,photos,audio,video,notes,pages,wall,offline" />
         <button type="submit">Sign In with Vkontakte</button>
     </form>
 	
