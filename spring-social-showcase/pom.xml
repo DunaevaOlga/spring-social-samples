@@ -256,6 +256,14 @@
 			<url>http://repo.springsource.org/milestone</url>
 			<snapshots><enabled>false</enabled></snapshots>
 		</repository>
+        <!-- Fugru repository, contains spring-social-vkontakte -->
+        <repository>
+            <id>snapshot</id>
+            <name>Fugru Maven Snapshot Repository</name>
+            <url>http://fugru.com/archiva/repository/snapshots</url>
+            <releases><enabled>false</enabled></releases>
+            <snapshots><enabled>true</enabled></snapshots>
+        </repository>
 	</repositories>
 	<build>
 		<plugins>
