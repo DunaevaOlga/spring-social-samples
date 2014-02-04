@@ -37,7 +37,7 @@ public class VKontakteProfileController {
 		if (connection == null) {
 			return "redirect:/connect/vkontakte";
 		}
-		model.addAttribute("profile", connection.getApi().usersOperations().getProfile());
+		model.addAttribute("profile", connection.getApi().usersOperations().getUser());
 		return "vkontakte/profile";
 	}
 
