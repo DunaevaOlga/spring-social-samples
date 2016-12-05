@@ -9,22 +9,12 @@
 	<version>1.0.0</version>
 	<properties>
 		<java-version>1.6</java-version>
-<<<<<<< HEAD:spring-social-showcase-xml/pom.xml
-		<org.springframework.social-version>1.1.0.BUILD-SNAPSHOT</org.springframework.social-version>
-		<org.springframework.social.facebook-version>1.1.0.BUILD-SNAPSHOT</org.springframework.social.facebook-version>
-		<org.springframework.social.twitter-version>1.1.0.BUILD-SNAPSHOT</org.springframework.social.twitter-version>
-		<org.springframework.social.linkedin-version>1.0.0.BUILD-SNAPSHOT</org.springframework.social.linkedin-version>
-        <org.springframework.social.vkontakte-version>1.1.0.BUILD-SNAPSHOT</org.springframework.social.vkontakte-version>
-        <org.springframework-version>3.2.3.RELEASE</org.springframework-version>
-        <org.springframework.security-version>3.1.4.RELEASE</org.springframework.security-version>
-        <org.slf4j-version>1.7.5</org.slf4j-version>
-=======
 		<org.springframework.social-version>1.1.2.RELEASE</org.springframework.social-version>
 		<org.springframework.social.facebook-version>2.0.2.RELEASE</org.springframework.social.facebook-version>
+		<org.springframework.social.vkontakte-version>2.0.0.BUILD-SNAPSHOT</org.springframework.social.vkontakte-version>
 		<org.springframework-version>4.2.0.RELEASE</org.springframework-version>
 		<org.springframework.security-version>4.0.0.RELEASE</org.springframework.security-version>
 		<org.slf4j-version>1.7.5</org.slf4j-version>
->>>>>>> upstream/master:attic/spring-social-showcase-xml/pom.xml
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -97,27 +87,14 @@
 	    </dependency>
 		<dependency>
 		    <groupId>org.springframework.social</groupId>
-<<<<<<< HEAD:spring-social-showcase-xml/pom.xml
-		    <artifactId>spring-social-twitter</artifactId>
-	        <version>${org.springframework.social.twitter-version}</version>
-	    </dependency>
-		<dependency>
-		    <groupId>org.springframework.social</groupId>
-		    <artifactId>spring-social-linkedin</artifactId>
-	        <version>${org.springframework.social.linkedin-version}</version>
-	    </dependency>
-        <dependency>
-            <groupId>org.springframework.social</groupId>
-            <artifactId>spring-social-vkontakte</artifactId>
-            <version>${org.springframework.social.vkontakte-version}</version>
-        </dependency>
-		<dependency>
-		    <groupId>org.springframework.social</groupId>
-=======
->>>>>>> upstream/master:attic/spring-social-showcase-xml/pom.xml
 		    <artifactId>spring-social-web</artifactId>
 	        <version>${org.springframework.social-version}</version>
 	    </dependency>
+		<dependency>
+			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-vkontakte</artifactId>
+			<version>${org.springframework.social.vkontakte-version}</version>
+		</dependency>
 	    
 	    <!-- Apache Http Client -->
  	    <dependency>
