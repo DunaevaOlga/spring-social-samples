@@ -13,6 +13,9 @@ buildscript {
     }
 }
 
+sourceCompatibility=1.7
+targetCompatibility=1.7
+
 war {
   baseName = 'spring-social-showcase'
 }
@@ -58,13 +61,14 @@ dependencies {
 
 repositories {
 	mavenLocal()
-	maven { url 'http://maven.springframework.org/release' }
-	maven { url 'http://maven.springframework.org/milestone' }
-	maven { url 'http://maven.springframework.org/snapshot' }
+	maven { url 'http://repo.spring.io/libs-staging-local'}
+	maven { url 'http://repo.spring.io/release' }
+	maven { url 'http://repo.spring.io/milestone' }
+	maven { url 'http://repo.spring.io/snapshot' }
 	maven { url 'http://download.java.net/maven/2' }
 	mavenCentral()
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.10'
+    gradleVersion = '1.11'
 }
