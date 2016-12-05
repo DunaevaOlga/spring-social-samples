@@ -71,7 +71,7 @@
             <!-- VKONTAKTE SIGNIN -->
             <form name="vk_signin" id="vk_signin" th:action="@{/signin/vkontakte}" method="POST">
                 <input type="hidden" name="_csrf" th:value="${_csrf.token}"></input>
-                <input type="hidden" name="scope" value="notify,friends,photos,audio,video,notes,pages,offline" />
+                <input type="hidden" name="scope" value="notify,friends,photos,audio,video,notes,pages,offline,email" />
                 <button type="submit">Sign In with Vkontakte</button>
             </form>
 		</div>		
