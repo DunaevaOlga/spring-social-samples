@@ -38,13 +38,19 @@
 				<li><a th:href="@{/facebook/expired}">Sim Expired</a></li>
 			</ul>
 			</div>
-			
 			<h4><a th:href="@{/linkedin}">LinkedIn</a></h4>
 			<div social:connected="linkedin">
 			<ul class="menu">
 				<li><a th:href="@{/linkedin}">User Profile</a></li>
 				<li><a th:href="@{/linkedin/connections}">Connections</a></li>
 			</ul>
+			</div>
+			<h4><a th:href="@{/vkontakte}">VKontakte</a></h4>
+			<div social:connected="vkontakte">
+				<ul class="menu">
+					<li><a th:href="@{/vkontakte}">User Profile</a></li>
+					<li><a th:href="@{/vkontakte/friends}">Friends</a></li>
+				</ul>
 			</div>
 		</div>
 		

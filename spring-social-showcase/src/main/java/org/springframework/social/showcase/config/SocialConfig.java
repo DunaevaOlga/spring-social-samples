@@ -71,21 +71,15 @@ public class SocialConfig implements SocialConfigurer {
 	
 	@Override
 	public void addConnectionFactories(ConnectionFactoryConfigurer cfConfig, Environment env) {
-<<<<<<< HEAD
-		cfConfig.addConnectionFactory(new TwitterConnectionFactory(env.getProperty("twitter.consumerKey"), env.getProperty("twitter.consumerSecret")));
-		cfConfig.addConnectionFactory(new FacebookConnectionFactory(env.getProperty("facebook.clientId"), env.getProperty("facebook.clientSecret")));
-		cfConfig.addConnectionFactory(new LinkedInConnectionFactory(env.getProperty("linkedin.consumerKey"), env.getProperty("linkedin.consumerSecret")));
-        cfConfig.addConnectionFactory(new VKontakteConnectionFactory(env.getProperty("vkontakte.consumerKey"), env.getProperty("vkontakte.consumerSecret")));
-=======
 		cfConfig.addConnectionFactory(new TwitterConnectionFactory(env.getProperty("twitter.appKey"), env.getProperty("twitter.appSecret")));
 		cfConfig.addConnectionFactory(new FacebookConnectionFactory(env.getProperty("facebook.appKey"), env.getProperty("facebook.appSecret")));
 		cfConfig.addConnectionFactory(new LinkedInConnectionFactory(env.getProperty("linkedin.appKey"), env.getProperty("linkedin.appSecret")));
->>>>>>> upstream/master
+		cfConfig.addConnectionFactory(new VKontakteConnectionFactory(env.getProperty("vkontakte.appKey"), env.getProperty("vkontakte.appSecret")));
 	}
 	
 	@Override
 	public UserIdSource getUserIdSource() {
-		return new UserIdSource() {			
+		return new UserIdSource() {
 			@Override
 			public String getUserId() {
 				Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
