@@ -9,10 +9,11 @@
 		<p>
 			Spring Social Showcase is connected to your VKontakte account.
 			Click the button if you wish to disconnect.
-		</p>		
+		</p>
 	</div>
 	<button type="submit">Disconnect</button>	
 	<input type="hidden" name="_method" value="delete" />
+	<input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
 </form>
 
 <a href="<c:url value="/vkontakte"/>">View your VKontakte profile</a>

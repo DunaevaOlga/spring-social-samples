@@ -13,3 +13,11 @@
 	<li><a href="<c:url value="/facebook/albums"/>">Albums</a></li>
 </ul>
 </social:connected>
+
+<h4><a href="<c:url value="/vkontakte"/>">VKontakte</a></h4>
+<social:connected provider="vkontakte">
+<ul class="menu">
+	<li><a href="<c:url value="/vkontakte"/>">User Profile</a></li>
+	<li><a href="<c:url value="/vkontakte/friends"/>">Friends</a></li>
+</ul>
+</social:connected>

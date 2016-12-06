@@ -7,6 +7,6 @@
 
 <ul class="friends">
 <c:forEach items="${friends}" var="friend">
-	<li><img src="<c:out value="${friend.photo}"/>" align="middle"/><c:out value="${friend.firstName}"/></li>
+	<li><img src="<c:out value="${friend.photo50}"/>" align="middle"/><c:out value="${friend.firstName}"/></li>
 </c:forEach>
 </ul>

@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 the original author or authors.
+ * Copyright 2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,8 @@
 package org.springframework.social.showcase.vkontakte;
 
 import org.springframework.social.vkontakte.api.VKontakte;
+import org.springframework.social.vkontakte.api.VKontakteProfile;
+import org.springframework.social.vkontakte.api.impl.json.VKArray;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,8 +37,8 @@ public class VKontakteFriendsController {
 
 	@RequestMapping(value="/vkontakte/friends", method=RequestMethod.GET)
 	public String showFeed(Model model) {
-		model.addAttribute("friends", vkontakte.friendsOperations().get());
+		VKArray<VKontakteProfile> friendsArray = vkontakte.friendsOperations().get();
+		model.addAttribute("friends", friendsArray.getItems());
 		return "vkontakte/friends";
 	}
-	
 }

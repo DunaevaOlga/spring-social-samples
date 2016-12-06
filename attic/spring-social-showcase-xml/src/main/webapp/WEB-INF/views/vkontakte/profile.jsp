@@ -7,13 +7,14 @@
 <p>Hello, <c:out value="${profile.firstName}"/>!</p>
 <dl>
 	<dt>VKontakte ID:</dt>
-	<dd><c:out value="${profile.uid}"/></dd>
+	<dd><c:out value="${profile.id}"/></dd>
 	<dt>Name:</dt>
 	<dd><c:out value="${profile.screenName}"/></dd>
 </dl>
 
 <c:url value="/connect/vkontakte" var="disconnectUrl"/>
 <form id="disconnect" action="${disconnectUrl}" method="post">
+    <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
 	<button type="submit">Disconnect from VK</button>
 	<input type="hidden" name="_method" value="delete" />
 </form>

@@ -20,6 +20,6 @@
 		
 		<div id="content">
 			<tiles:insertAttribute name="content" />
-		</div>		
+		</div>
 	</body>
 </html>

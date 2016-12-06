@@ -38,26 +38,16 @@
 	
 	<p>Or you can <a href="<c:url value="/signup"/>">signup</a> with a new account.</p>
 </sf:form>
-
-	<!-- TWITTER SIGNIN -->
-	<form id="tw_signin" action="<c:url value="/signin/twitter"/>" method="POST">
-		<button type="submit"><img src="<c:url value="/resources/social/twitter/sign-in-with-twitter-d.png"/>" /></button>
-	</form>
-
 	<!-- FACEBOOK SIGNIN -->
 	<form name="fb_signin" id="fb_signin" action="<c:url value="/signin/facebook"/>" method="POST">
+	    <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
         <input type="hidden" name="scope" value="publish_stream,user_photos,offline_access" />
 		<button type="submit"><img src="<c:url value="/resources/social/facebook/sign-in-with-facebook.png"/>" /></button>
 	</form>
 
-	<!-- LINKEDIN SIGNIN -->
-	<form name="li_signin" id="li_signin" action="<c:url value="/signin/linkedin"/>" method="POST">
-		<button type="submit">Sign In with LinkedIn</button>
-	</form>
-
     <!-- VKONTAKTE SIGNIN -->
     <form name="vk_signin" id="vk_signin" action="<c:url value="/signin/vkontakte"/>" method="POST">
+        <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
         <input type="hidden" name="scope" value="notify,friends,photos,audio,video,notes,pages,offline" />
-        <button type="submit">Sign In with Vkontakte</button>
+        <button type="submit"><img src="<c:url value="/resources/social/vkontakte/connect_short.png" />"/></button>
     </form>
-	
