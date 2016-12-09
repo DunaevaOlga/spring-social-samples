@@ -27,7 +27,7 @@ import javax.inject.Inject;
 
 @Controller
 public class VKontakteProfileController {
-	
+
 	@Inject
 	private ConnectionRepository connectionRepository;
 
