@@ -8,12 +8,12 @@
 	<packaging>war</packaging>
 	<version>1.0.0</version>
 	<properties>
-		<java-version>1.6</java-version>
-		<org.springframework.social-version>1.1.2.RELEASE</org.springframework.social-version>
+		<java-version>1.8</java-version>
+		<org.springframework.social-version>2.0.0.M1</org.springframework.social-version>
 		<org.springframework.social.facebook-version>2.0.2.RELEASE</org.springframework.social.facebook-version>
 		<org.springframework.social.vkontakte-version>2.0.0.BUILD-SNAPSHOT</org.springframework.social.vkontakte-version>
-		<org.springframework-version>4.2.0.RELEASE</org.springframework-version>
-		<org.springframework.security-version>4.0.0.RELEASE</org.springframework.security-version>
+		<org.springframework-version>5.0.0.M3</org.springframework-version>
+		<org.springframework.security-version>4.2.0.RELEASE</org.springframework.security-version>
 		<org.slf4j-version>1.7.5</org.slf4j-version>
 	</properties>
 	<dependencies>
@@ -114,12 +114,12 @@
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
-			<version>1.0.0.GA</version>
+			<version>1.1.0.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>4.1.0.Final</version>
+			<version>5.2.2.Final</version>
 		</dependency>
 	    
 		<!-- Logging -->
@@ -164,12 +164,12 @@
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-jsp</artifactId>
-			<version>2.2.2</version>
+			<version>3.0.5</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-el</artifactId>
-			<version>2.2.2</version>
+			<version>3.0.5</version>
 		</dependency>
 		
 		<!-- @Inject -->

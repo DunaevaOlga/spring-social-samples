@@ -15,6 +15,11 @@
  */
 package org.springframework.social.showcase.vkontakte;
 
+import com.vk.api.sdk.client.VkApiClient;
+import com.vk.api.sdk.exceptions.ApiException;
+import com.vk.api.sdk.exceptions.ClientException;
+import com.vk.api.sdk.httpclient.HttpTransportClient;
+import com.vk.api.sdk.queries.users.UserField;
 import org.springframework.social.connect.Connection;
 import org.springframework.social.connect.ConnectionRepository;
 import org.springframework.social.vkontakte.api.VKontakte;
@@ -32,12 +37,14 @@ public class VKontakteProfileController {
 	private ConnectionRepository connectionRepository;
 
 	@RequestMapping(value="/vkontakte", method=RequestMethod.GET)
-	public String home(Model model) {
+	public String home(Model model) throws ClientException, ApiException {
 		Connection<VKontakte> connection = connectionRepository.findPrimaryConnection(VKontakte.class);
 		if (connection == null) {
 			return "redirect:/connect/vkontakte";
 		}
-		model.addAttribute("profile", connection.getApi().usersOperations().getUser());
+		VkApiClient vk = new VkApiClient(HttpTransportClient.getInstance());
+		model.addAttribute("profile", vk.users().get(connection.getApi().getUserActor())
+				.fields(UserField.SCREEN_NAME).execute().get(0));
 		return "vkontakte/profile";
 	}
 
