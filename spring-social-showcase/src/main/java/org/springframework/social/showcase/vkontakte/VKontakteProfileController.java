@@ -45,6 +45,8 @@ public class VKontakteProfileController {
 		VkApiClient vk = new VkApiClient(HttpTransportClient.getInstance());
 		model.addAttribute("profile", vk.users().get(connection.getApi().getUserActor())
 				.fields(UserField.SCREEN_NAME).execute().get(0));
+
+		model.addAttribute("email", connection.getApi().getEmail());
 		return "vkontakte/profile";
 	}
 

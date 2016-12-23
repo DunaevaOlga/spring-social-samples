@@ -27,6 +27,8 @@
         <dd th:text="${profile.id}"></dd>
         <dt>Name:</dt>
         <dd th:text="${profile.screenName}"></dd>
+        <dt>Email:</dt>
+        <dd th:text="${email}"></dd>
     </dl>
 
     <form id="disconnect" th:action="@{/connect/vkontakte}" method="post">
