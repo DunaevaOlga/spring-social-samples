@@ -16,7 +16,7 @@
 <context:property-placeholder location="classpath:/org/springframework/social/showcase/config/application.properties" />
 
 	<facebook:config app-id="${facebook.clientId}" app-secret="${facebook.clientSecret}" app-namespace="socialshowcase" />
-    <vkontakte:config app-id="${vkontakte.consumerKey}" app-secret="${vkontakte.consumerSecret}"/>
+    <vkontakte:config app-id="${vkontakte.appKey}" app-secret="${vkontakte.appSecret}"/>
 
 	<social:jdbc-connection-repository/>	
 	<bean id="userIdSource" class="org.springframework.social.security.AuthenticationNameUserIdSource" />
