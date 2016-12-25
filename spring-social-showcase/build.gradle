@@ -45,6 +45,7 @@ dependencies {
 	compile "org.springframework.social:spring-social-twitter:$springSocialTwitterVersion"
 	compile "org.springframework.social:spring-social-linkedin:$springSocialLinkedInVersion"
 	compile "org.springframework.social:spring-social-vkontakte:$springSocialVKontakteVersion"
+	compile "org.springframework.social:spring-social-odnoklassniki:$springSocialOdnoklassnikiVersion"
     compile("org.thymeleaf:thymeleaf-spring4:$thymeleafVersion")
     compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:$thymeleafLayoutVersion")
 

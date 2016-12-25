@@ -44,6 +44,8 @@ import org.springframework.social.facebook.connect.FacebookConnectionFactory;
 import org.springframework.social.facebook.web.DisconnectController;
 import org.springframework.social.linkedin.api.LinkedIn;
 import org.springframework.social.linkedin.connect.LinkedInConnectionFactory;
+import org.springframework.social.odnoklassniki.api.Odnoklassniki;
+import org.springframework.social.odnoklassniki.connect.OdnoklassnikiConnectionFactory;
 import org.springframework.social.showcase.facebook.PostToWallAfterConnectInterceptor;
 import org.springframework.social.showcase.signin.SimpleSignInAdapter;
 import org.springframework.social.showcase.twitter.TweetAfterConnectInterceptor;
@@ -75,6 +77,7 @@ public class SocialConfig implements SocialConfigurer {
 		cfConfig.addConnectionFactory(new FacebookConnectionFactory(env.getProperty("facebook.appKey"), env.getProperty("facebook.appSecret")));
 		cfConfig.addConnectionFactory(new LinkedInConnectionFactory(env.getProperty("linkedin.appKey"), env.getProperty("linkedin.appSecret")));
 		cfConfig.addConnectionFactory(new VKontakteConnectionFactory(env.getProperty("vkontakte.appKey"), env.getProperty("vkontakte.appSecret")));
+		cfConfig.addConnectionFactory(new OdnoklassnikiConnectionFactory(env.getProperty("odnoklassniki.appKey"), env.getProperty("odnoklassniki.appSecret"), env.getProperty("odnoklassniki.applicationKey")));
 	}
 	
 	@Override
@@ -127,7 +130,14 @@ public class SocialConfig implements SocialConfigurer {
         Connection<VKontakte> connection = repository.findPrimaryConnection(VKontakte.class);
         return connection != null ? connection.getApi() : null;
     }
-	
+
+	@Bean
+	@Scope(value="request", proxyMode=ScopedProxyMode.INTERFACES)
+	public Odnoklassniki odnoklassniki(ConnectionRepository repository) {
+		Connection<Odnoklassniki> connection = repository.findPrimaryConnection(Odnoklassniki.class);
+		return connection != null ? connection.getApi() : null;
+	}
+
 	//
 	// Web Controller and Filter Beans
 	//

@@ -74,6 +74,13 @@
                 <input type="hidden" name="scope" value="notify,friends,photos,audio,video,notes,pages,offline,email" />
                 <button type="submit"><img th:src="@{/resources/social/vkontakte/connect_short.png}"></img></button>
             </form>
+
+            <!-- ODNOKLASSNIKI SIGNIN -->
+            <form name="ok_signin" id="ok_signin" th:action="@{/signin/odnoklassniki}" method="POST">
+                <input type="hidden" name="_csrf" th:value="${_csrf.token}"></input>
+                <input type="hidden" name="scope" value="VALUABLE_ACCESS" />
+                <button type="submit"><img th:src="@{/resources/social/odnoklassniki/connect_short.png}"></img></button>
+            </form>
 		</div>
 	</body>
 </html>

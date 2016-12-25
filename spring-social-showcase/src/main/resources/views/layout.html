@@ -52,6 +52,13 @@
 					<li><a th:href="@{/vkontakte/friends}">Friends</a></li>
 				</ul>
 			</div>
+			<h4><a th:href="@{/odnoklassniki}">Odnoklassniki</a></h4>
+			<div social:connected="odnoklassniki">
+				<ul class="menu">
+					<li><a th:href="@{/odnoklassniki}">User Profile</a></li>
+					<li><a th:href="@{/odnoklassniki/friends}">Friends</a></li>
+				</ul>
+			</div>
 		</div>
 		
 		<div id="content" layout:fragment="content">
