@@ -39,7 +39,7 @@ public class OdnoklassnikiProfileController {
 		if (connection == null) {
 			return "redirect:/connect/odnoklassniki";
 		}
-
+		model.addAttribute("profile", connection.getApi().usersOperations().getProfile());
 		return "odnoklassniki/profile";
 	}
 
